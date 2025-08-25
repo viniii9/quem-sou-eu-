@@ -1,12 +1,179 @@
-{
+/* Reset básico para eliminar margens e padding */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
-    font-family: 'segoe ui', tahoma, geneva, vedana, sans-serif;
-
+    box-sizing: border-box;
 }
 
+/* Definindo fonte global e cores */
 body {
-    background-color: aliceblue
-    padding: 200px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+/* Estilizando as imagens */
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #007BFF;
+    margin-right: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Estilizando a seção 'Sobre Mim' */
+.sessao {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #007BFF;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.sessao h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+}
+
+.sessao h2::before {
+    content: "💬 ";
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+/* Estilizando listas de habilidades e interesses */
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "🔹";
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Estilizando os links nos projetos */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para a seção de 'Contato' */
+.contato ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.contato li a {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.contato li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção de Habilidades */
+.habilidades {
+    background-color: #eef2f7;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 5px solid #007BFF;
+}
+
+/* Projetos */
+.projetos ul {
+    padding-left: 20px;
+}
+
+.projetos li {
+    margin: 12px 0;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.projetos li a {
+    color: #007BFF;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Efeito de hover nas seções */
+.sessao:hover,
+.projetos li:hover,
+.habilidades ul li:hover {
+    background-color: #e8f4fd;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-perfil {
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
